@@ -23,8 +23,7 @@ class Event < ApplicationRecord
   end
 
   def duration_is_multiple_of_5?
-    result = self.duration / 5
-    result.is_a? Integer
+    self.duration % 5 == 0
   end
 
 end
