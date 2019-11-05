@@ -37,7 +37,11 @@
     <% if user_signed_in? %>
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon profil</a>
       <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 44px, 0px);">
-        <%= link_to "#{current_user.first_name}", user_path(current_user.id) %>
+        <% if current_user.first_name %>
+          <%= link_to "#{current_user.first_name}", user_path(current_user.id) %>
+        <% else %>
+        <%= link_to "#{current_user.email}", user_path(current_user.id) %>
+        <% end %>
         <br>
         <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
       </div>
