@@ -26,25 +26,28 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Créer un évènement<span class="sr-only">(current)</span></a>
-      </li>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item nav-link active">
+          <%= link_to "Créer un évènement", new_event_path %>
+        </li>
+    </div>
+    
   <div class="nav-item dropdown">
     <% if user_signed_in? %>
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon profil</a>
       <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 44px, 0px);">
-        <a class="dropdown-item" href="#"><%= current_user.first_name %></a>
-        <a class="dropdown-item" href="#">Se déconnecter</a>
+        <%= link_to "#{current_user.first_name}", user_path(current_user.id) %>
+        <br>
+        <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
       </div>
 
     <% else %>
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">S'inscrire/Se connecter</a>
     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 44px, 0px);">
-      <a class="dropdown-item" href="#">S'inscrire</a>
-      <a class="dropdown-item" href="#">Se connecter</a>
+      <%= link_to "S'inscrire", new_user_registration_path %>
+      <br>
+      <%= link_to "Se connecter", new_user_session_path %>
     </div>
 
     <% end %>
