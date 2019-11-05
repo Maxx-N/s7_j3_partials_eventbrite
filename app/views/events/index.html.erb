@@ -1,5 +1,5 @@
 <h1>Voici la liste des évènements de Montpellier !!!</h1>
-<div class="d-flex p-2 bd-highlight">
+<div class="d-flex flex-wrap">
     <% Event.all.each do |e| %>
       <div class="card border-info mb-3" style="max-width: 20rem;">
           <div class="card-header"><%= e.location %></div>
