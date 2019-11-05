@@ -1,0 +1,13 @@
+<h1>Voici la liste des évènements de Montpellier !!!</h1>
+  <% Event.all.each do |e| %>
+    <p>
+      <strong><u><%= e.title %></u></strong>
+      <ul>
+        <li>Lieu : <%= e.location %></li>
+        <li>Début : <%= e.start_date %></li>
+        <li>Durée : <%= e.duration %> minutes</li>
+        <li>Prix : <%= e.price %> euros</li>
+        <li>Description : <%= e.description %></li>
+      </ul>
+    </p>
+  <% end %>
