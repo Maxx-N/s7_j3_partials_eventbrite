@@ -68,3 +68,5 @@ gem "table_print", "~> 1.5"
 gem "faker", "~> 2.7"
 
 gem "dotenv-rails", "~> 2.7"
+
+gem "devise", "~> 4.7"
