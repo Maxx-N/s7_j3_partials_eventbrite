@@ -1,13 +1,17 @@
 <h1>Voici la liste des évènements de Montpellier !!!</h1>
-  <% Event.all.each do |e| %>
-    <p>
-      <strong><u><%= e.title %></u></strong>
-      <ul>
-        <li>Lieu : <%= e.location %></li>
-        <li>Début : <%= e.start_date %></li>
-        <li>Durée : <%= e.duration %> minutes</li>
-        <li>Prix : <%= e.price %> euros</li>
-        <li>Description : <%= e.description %></li>
-      </ul>
-    </p>
+<div class="d-flex p-2 bd-highlight">
+    <% Event.all.each do |e| %>
+      <div class="card border-info mb-3" style="max-width: 20rem;">
+          <div class="card-header"><%= e.location %></div>
+          <div class="card-body">
+              <h4 class="card-title"><%= link_to "#{e.title}", event_path(e.id) %></h4>
+              <p class="card-text">
+                <li><u>Début : </u><br><%= e.start_date.strftime("%d %B %Y, %H:%M") %></li>
+                <li><u>Durée : </u><br><%= e.duration %> minutes</li>
+                <li><u>Prix : </u><br><%= e.price %> euros</li>
+                <li><u>Description : </u><br><%= e.description %></li>         
+              </p>
+          </div>
+      </div>
   <% end %>
+</div>
