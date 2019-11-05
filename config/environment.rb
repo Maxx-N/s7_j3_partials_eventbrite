@@ -4,6 +4,7 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
+=begin
 ActionMailer::Base.smtp_settings = {
   :user_name => ENV['SENDGRID_LOGIN'],
   :password => ENV['SENDGRID_PWD'],
@@ -13,8 +14,8 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain,
   :enable_starttls_auto => true
 }
+=end
 
-=begin
 ActionMailer::Base.smtp_settings =   {
     :address            => 'smtp.gmail.com',
     :port               => 587,
@@ -23,4 +24,3 @@ ActionMailer::Base.smtp_settings =   {
     :user_name          => ENV['GMAIL_LOGIN'],
     :password           => ENV['GMAIL_PWD']
   }
-=end
