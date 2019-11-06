@@ -1,24 +1,31 @@
-# README
+Bonjour et bienvenus !!! :) 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Voici comment lancer le programme : 
 
-* Ruby version
+  DANS LE TERMINAL, TAPER LES COMMANDES SUIVANTES : 
 
-* System dependencies
+    - git clone https://github.com/Maxx-N/s6_j2_eventbrite_devise.git
 
-* Configuration
+    - cd s6_j2_eventbrite_devise/
 
-* Database creation
+    - bundle install
 
-* Database initialization
+    - rails db:create
 
-* How to run the test suite
+    - rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+    - rails db:seed
 
-* Deployment instructions
+    - rails server
+    
+    (laisser tourner le serveur)
 
-* ...
+  PUIS, DANS VOTRE NAVIGATEUR, SAISIR L'URL : 
+
+    - http://localhost:3000/
+
+
+Sinon, il y a la page Heroku (mais je n'ai pas pu créé d'évènements en base via Heroku et comme mon formulaire de création n'est pas totalement opérationnel à cause du format de cette @#$* de start_date, vous ne pourrez pas faire grand chose :(     ...)    :
+
+    - https://montpel-events.herokuapp.com/
