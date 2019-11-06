@@ -1,19 +1,14 @@
-
-
-
-  
-
 <div class="jumbotron">
   <h1 class="display-3"><%= @my_event.title %></h1>
   <p class="lead">
     <ul>
-      <li><u>Nombre d'inscrits : </u><%= @my_event.users.length %> personne(s)</li>
-      <li><u>Email de l'organisateur : </u><%= @my_event.organizer.email %></li>
-      <li><u>Date et heure de début : </u><%= @my_event.start_date.strftime("%d %B %Y, %H:%M") %></li>
-      <li><u>Date et heure de fin : </u><%= @my_event.end_date.strftime("%d %B %Y, %H:%M") %></li>
-      <li><u>Lieu : </u><%= @my_event.location %></li>
-      <li><u>Prix : </u><%= @my_event.price %> €</li>
-      <li><u>Description : </u><%= @my_event.description %></li>
+      <li><u>Nombre d'inscrits :</u> <%= @my_event.users.length %> personne(s)</li><br>
+      <li><u>Email de l'organisateur :</u> <%= @my_event.organizer.email %></li><br>
+      <li><u>Date et heure de début :</u> <%= @my_event.start_date.strftime("%d %B %Y, %H:%M") %></li><br>
+      <li><u>Date et heure de fin :</u> <%= @my_event.end_date.strftime("%d %B %Y, %H:%M") %></li><br>
+      <li><u>Lieu :</u> <%= @my_event.location %></li><br>
+      <li><u>Prix :</u> <%= @my_event.price %> €</li><br>
+      <li><u>Description :</u> <%= @my_event.description %></li>
     </ul>
   </p>
 </div>
