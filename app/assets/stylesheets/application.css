@@ -1,15 +1,216 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* GÉNÉRAL */
+
+body {
+  width:70%;
+  padding:90px 0px 50px 0px;
+  margin:auto;
+}
+
+a {text-transform:uppercase;}
+
+em {color:#4BBF73;}
+
+/* NAVBAR */
+.navbar {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+}
+
+.dropdown-menu {margin-right:-110px;}
+
+/* FOOTER */
+.footer {
+  margin-top:50px;
+  position:absolute;
+  left:0px;
+  width:100%;
+  min-height:150px;
+}
+.boxfooter {margin:30px;}
+.fleft{
+  width:150px;
+  text-align:right;
+  font-size:70px;
+}
+.fcenter{
+  text-align:justify;
+  font-size:12px;
+  line-height:12px;
+  width: 500px;
+}
+.fright{width:250px;}
+
+/* HEADER */
+.header {
+  position:absolute;
+  overflow:hidden;
+  left:0px;
+  width:100%;
+  text-align:center;
+  text-shadow: 2px 0px  0px #000000;
+}
+.headhome {height:400px;}
+.clearbann {height:430px; /* hauteur de la bannière + 30px */ }
+.headhome h1 {margin-top:-300px;}
+
+.minhead {height:200px;}
+.clearminbann {height:230px; /* hauteur de la bannière + 30px */ }
+.minhead h1 {margin-top: -130px;}
+
+.header img {
+  height:100%;
+  width: 100%;
+  object-fit:cover;
+}
+
+.header h1 {
+  z-index:2;
+  color:#ffffff;
+}
+.header a{
+  color:#ffffff;
+  text-decoration: none;
+}
+.header a:hover{
+  color:#ffffff;
+  text-decoration: none;
+}
+.header h3 {
+  padding: 0px 300px;
+  color:#ffffff;
+}
+
+/* FORMULAIRES */
+
+.formbox {
+  width:700px;
+  margin:30px 0px 0px 100px;
+}
+
+.formboxco {
+  width:500px;
+  margin:30px 0px 0px 100px;
+}
+
+/* CARTES EVENT */
+
+.cardevent {
+  margin:10px;
+  width:23%;
+  border:1px solid #dedede;
+}
+
+.cardevent p{text-align:justify;
+  overflow:auto; height:100px;
+  font-size:11px;
+  line-height:12px;
+padding:10px;}
+
+.titlecard {
+  text-transform:uppercase;
+  text-align:center;
+}
+
+.cardbloc {
+  text-transform:uppercase;
+  padding: 3px 10px;
+}
+
+.cfoot{border-top:1px solid #dedede;}
+.cpart{border-bottom:1px solid #dedede;}
+
+.infocard {padding:0px 10px;}
+
+/* CARD USER */ 
+
+.carduser{
+  border-left:1px solid #ededed;
+  border-right:1px solid #ededed;
+  border-bottom:1px solid #ededed;
+}
+
+.ico {
+  width:50px;
+  height: 50px;
+  object-fit:cover;
+  border:1px solid #dedede;
+  margin: -20px 0px -20px -15px;
+}
+
+/* COMMENTAIRES */
+
+.title-comment {
+  background-color: #343a40;
+}
+
+.comment {font-size:11px; line-height:12px; text-align:justify;}
+
+/* SHOW */
+
+.showevent {
+width:80%;
+margin:auto;
+border: 1px solid #dedede;
+}
+.showevent img {
+  width:100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.show {
+  height:250px; 
+  overflow:auto;
+}
+
+.showcontent {
+  text-align:justify;
+  width:100%;
+  padding:20px;
+}
+.showinfo {
+  background-color: #ededed;
+  border-left: #dedede;
+  padding:10px;
+  width:250px;
+  color: #000000;
+  text-align:center;
+}
+.grey {background-color: #ededed;}
+
+.showorga {
+  width:80%;
+  margin:auto;
+}
+
+/* SPOILER */
+
+
+input[id^="spoiler"]{display: none;}
+input[id^="spoiler"] + label {
+ display: block;
+ width: 100%;
+ margin-top: 20px;
+ padding: 5px 20px;
+ background: #dedede;
+ text-align: center;
+ font-size: 15px;
+ cursor: pointer;
+ text-transform:uppercase;
+ transition: all .6s;
+}
+
+input[id^="spoiler"] ~ .spoiler {
+ width: 100%;
+ height: 0;
+ opacity: 0;
+ overflow: hidden;
+ background: #eee;
+ transition: all .6s;
+}
+input[id^="spoiler"]:checked + label + .spoiler{
+ height: auto;
+ opacity: 1;
+}
